@@ -5,12 +5,12 @@ import { faPlay , faAngleLeft , faAngleRight} from '@fortawesome/free-solid-svg-
 const Player = () => {
     return (
         <div className="player">
-<div className="time-controll">
+<div className="time-control">
     <p>Start Time</p>
     <input type="range"></input>
     <p> End time</p>
 </div>
-<div className="play-controll">
+<div className="play-control">
 <FontAwesomeIcon className="skip-back" icon={faAngleLeft} size="2x"/>
 <FontAwesomeIcon className="play" icon={faPlay} size="2x"/>
 <FontAwesomeIcon className="skip-forward" icon={faAngleRight} size="2x"/>
