@@ -36,9 +36,9 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
   return (
     <div className="player">
       <div className="time-control">
-        <p>{songInfo.currentTime}</p>
+        <p>{getTime(songInfo.currentTime)}</p>
         <input type="range"></input>
-        <p>{songInfo.duration}</p>
+        <p>{getTime(songInfo.duration)}</p>
       </div>
       <div className="play-control">
         <FontAwesomeIcon className="skip-back" icon={faAngleLeft} size="2x" />
@@ -56,6 +56,7 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
       </div>
       <audio
         onTimeUpdate={timeUpdateHandler}
+        onLoadedMetadata={timeUpdateHandler}
         ref={audioRef}
         src={currentSong.audio}
       ></audio>
