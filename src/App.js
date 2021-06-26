@@ -8,9 +8,10 @@ import './styles/app.scss'
 function App() {
 
 const [songs, setSongs] = useState(data())
+const [currentSong, setCurrentSong] = useState(songs[0])
   return (
     <div className="App">
-<Song/>
+<Song currentSong={currentSong}/>
 <Player />
     </div>
   );
