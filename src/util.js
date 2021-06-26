@@ -18,7 +18,7 @@ function chillHop() {
       audio: "",
       color: ["", ""],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
   ];
 }
