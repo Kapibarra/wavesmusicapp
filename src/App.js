@@ -19,7 +19,7 @@ currentSong={currentSong}
   setIsPlaying={setIsPlaying}
   isPlaying={isPlaying}
 />
-<Library songs={songs}/>
+<Library songs={songs} setCurrentSong={setCurrentSong}/>
     </div>
   );
 }

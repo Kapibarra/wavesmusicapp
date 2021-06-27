@@ -10,6 +10,11 @@ h3 {
     color: rgb(20, 20, 20)
 }
 
+body {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+}
+
 @import './player';
 @import './song';
 @import './library';
