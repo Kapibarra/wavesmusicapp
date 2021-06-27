@@ -6,7 +6,9 @@ import data from "./util";
 import "./styles/app.scss";
 
 function App() {
+  //Ref
   const audioRef = useRef(null);
+  //State
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -30,7 +32,12 @@ function App() {
         setSongInfo={setSongInfo}
         songInfo={songInfo}
       />
-      <Library songs={songs} setCurrentSong={setCurrentSong} />
+      <Library
+        songs={songs}
+        setCurrentSong={setCurrentSong}
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+      />
       <audio
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
